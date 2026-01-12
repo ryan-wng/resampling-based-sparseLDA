@@ -91,7 +91,7 @@ def train_single_subspace_cv(X_train_sub, y_train, lambda_grid, sub_varnames,
     
     X_train_sub_s = X_train_sub_s + 1e-8 * np.random.randn(*X_train_sub_s.shape)
     
-    # NOTE: Using fixed gam=1e-4 as requested
+    # NOTE: Using fixed gam=1e-4
     model = ordASDA(X_train_sub_s, y_train, s=2, h=1, gam=1e-4, lam=optimal_lambda) 
     
     beta = model['beta']
