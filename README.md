@@ -1,9 +1,9 @@
-# accSDA-Python
+# Resampling-Based Sparse LDA
 
-## A Python implementation of Adaptive and Elastic-Net Sparse Discriminant Analysis (accSDA)  
-Translated and re-engineered from the original **R `accSDA` package**.
+## Using a Python implementation of Adaptive and Elastic-Net Sparse Discriminant Analysis (accSDA)  
+Developed by referencing the original **R `accSDA` package**.
 
-This repository provides a faithful Python translation of the core algorithms in `accSDA`, including sparse discriminant analysis, elastic-net regularization, ADMM solvers, accelerated proximal gradient methods, and ordinal extensions.
+This repository provides an original Python version of the core algorithms in `accSDA`, including sparse discriminant analysis, elastic-net regularization, ADMM solvers, accelerated proximal gradient methods, and ordinal extensions.
 
 ---
 

@@ -50,19 +50,3 @@ def APG_EN2(A, d, x0, lam, alpha, maxits, tol, selector=None):
             x = selector * shrink + (1 - selector) * (y - alpha * dfy)
 
     return {'x': x, 'k': k}
-
-
-# # ---- Load data ----
-# A_matrix = pd.read_csv("../A_matrix.csv").values
-# d = pd.read_csv("../d_vector.csv").values
-# x0 = pd.read_csv("../x0.csv").values
-
-# A = {"flag": 0, "A": A_matrix}
-
-# # ---- Call APG_EN2 ----
-# res_py = APG_EN2(A, d, x0, lam=0.1, alpha=0.1, maxits=1000, tol=1e-6)
-
-# print("Python result:")
-# print(res_py["x"].ravel())
-
-# done

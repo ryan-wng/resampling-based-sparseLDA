@@ -17,17 +17,3 @@ def normalize(X):
         'vx': vx,
         'Id': Id
     }
-
-# --- Test the normalize function ---
-# Data
-# X = np.random.choice([1, 2, 3], size=(3, 4), replace=True)
-
-# # Normalize data
-# Nm = normalize(X)
-
-# # Print normalized matrix
-# print("Normalized Xc:\n", Nm["Xc"])
-
-# # Check if any variables were removed (columns with zero variance)
-# removed_vars = np.where(~Nm["Id"])[0]
-# print("Removed variable indices (0-based):", removed_vars)

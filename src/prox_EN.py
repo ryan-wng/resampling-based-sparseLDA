@@ -38,27 +38,3 @@ def prox_EN(A, d, x0, lam, alpha, maxits, tol):
         x = np.sign(x - alpha * df) * np.maximum(np.abs(x - alpha * df) - lam * alpha, 0)
 
     return {'x': x, 'k': k}
-
-
-
-# Load dataset from R
-# A = pd.read_csv("../A.csv").to_numpy()
-# d = pd.read_csv("../d.csv").to_numpy()
-# x0 = pd.read_csv("../x0.csv").to_numpy()
-
-# # Parameters (same as R)
-# lam = 0.1
-# alpha = 0.01
-# maxits = 1000
-# tol = 1e-6
-
-# # Run Python function
-# res_py = prox_EN(A=A, d=d, x0=x0,
-#                  lam=lam, alpha=alpha,
-#                  maxits=maxits, tol=tol)
-
-# print("Python results:")
-# print(res_py["x"])
-# print(f"Iterations: {res_py['k']}")
-
-#done

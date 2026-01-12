@@ -81,38 +81,3 @@ def APG_EN2bt(A, Xt, Om, gamma, d, x0, lam, L, eta, maxits, tol, selector=None):
         y = x + ((told - 1)/t) * (x - xold)
 
     return {'x': x, 'k': k, 'L': L}
-
-
-# X = pd.read_csv("../X.csv", header=0).to_numpy()        # Use header=0 if your CSV has headers
-# Om = pd.read_csv("../Om.csv", header=0).to_numpy()
-# gom = pd.read_csv("../gom.csv", header=0).to_numpy()
-# d = pd.read_csv("../d.csv", header=0).to_numpy()
-# x0 = pd.read_csv("../x0.csv", header=0).to_numpy()
-
-# class Aobject:
-#     def __init__(self, flag, gom, X, Xt, n):
-#         self.flag = flag
-#         self.gom = gom
-#         self.X = X
-#         self.Xt = Xt
-#         self.n = n
-
-# n, p = X.shape
-# A = Aobject(flag=1, gom=gom, X=X, Xt=X, n=n)
-
-# gamma = 0.1
-# lam = 0.1
-# L = 1.0
-# eta = 1.1
-# maxits = 1000
-# tol = 1e-6
-# selector = np.ones_like(x0)
-
-
-# res_py = APG_EN2bt(A=A, Xt=X, Om=Om, gamma=gamma, d=d, x0=x0,
-#                    lam=lam, L=L, eta=eta, maxits=maxits, tol=tol,
-#                    selector=selector)
-
-# print("Python APG_EN2bt x:\n", res_py['x'])
-
-#done

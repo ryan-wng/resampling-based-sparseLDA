@@ -98,32 +98,3 @@ def APG_EN2rr(A, d, x0, lam, alpha, maxits, tol, selector=None):
             x = selector * shrink + (1.0 - selector) * z
 
     return {'x': x, 'k': k}
-
-
-# # Load saved data
-# X = pd.read_csv("../X.csv").to_numpy()
-# gom = pd.read_csv("../gom.csv").to_numpy().flatten()
-# d = pd.read_csv("../d.csv").to_numpy()
-# x0 = pd.read_csv("../x0.csv").to_numpy()
-
-# # Pack into dict like R list
-# A = {"X": X, "gom": gom, "n": X.shape[0]}
-
-# # Parameters
-# lam = 0.1
-# alpha = 0.01
-# maxits = 1000
-# tol = 1e-6
-# selector = np.ones(x0.shape[0])
-
-# # Run Python function
-# res_py = APG_EN2rr(A=A, d=d, x0=x0,
-#                    lam=lam, alpha=alpha,
-#                    maxits=maxits, tol=tol,
-#                    selector=selector)
-
-# print("Python results:")
-# print(res_py["x"])
-# print(f"Iterations: {res_py['k']}")
-
-#done

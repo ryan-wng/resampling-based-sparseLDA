@@ -132,30 +132,3 @@ def SDAAP(Xt, Yt, Om, gam, lam, q, PGsteps, PGtol, maxits, tol, selector=None, i
         "subits": subits,
         "totalits": totalits
     }
-
-
-# Xt = pd.read_csv("../Xt.csv").values
-# Yt = pd.read_csv("../Yt.csv").values
-# Om = pd.read_csv("../Om.csv").values
-
-
-# res_py = SDAAP(
-#     Xt=Xt,
-#     Yt=Yt,
-#     Om=Om,
-#     gam=1e-3,
-#     lam=1e-2,
-#     q=2,
-#     PGsteps=50,
-#     PGtol=1e-5,
-#     maxits=100,
-#     tol=1e-5,
-#     L=1,
-#     eta=2
-# )
-
-# B_py, Q_py = res_py["B"], res_py["Q"]
-
-# print("Python SDAAP Results:")
-# print("B (coefficients):\n", res_py["B"])
-# print("Q (discriminant vectors):\n", res_py["Q"])

@@ -1,12 +1,6 @@
 import numpy as np
-import pandas as pd
 from .ASDA import ASDA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-
-# import sys
-# import os
-# sys.path.append(os.path.abspath(".."))
-# import funs
 
 def ordASDA(Xt, Yt, s=1, Om=None, gam=0, lam=1e-6, method="SDAAP", control=None, h=1):
     """
@@ -109,21 +103,3 @@ def ordASDA(Xt, Yt, s=1, Om=None, gam=0, lam=1e-6, method="SDAAP", control=None,
     res["n_selected"] = np.count_nonzero(res["beta"][:p])
 
     return res
-
-
-# # Load datasets
-#x = pd.read_csv("../use_data_filtered.csv")
-#y = pd.read_csv("../use_dataY_filtered.csv")
-# # test = pd.read_csv("../test.csv")
-
-# Xt = x.values
-# Yt = y.values
-
-# # Xtest = test.drop(columns=["Y"]).values
-# # Ytest = test["Y"].values
-
-
-# res = ordASDA(Xt, Yt, s=2, gam=0, lam=0.04)
-# print(res["beta"])
-# prediction = funs.predict_asda(res, Xt)
-# print(prediction)

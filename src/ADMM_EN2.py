@@ -80,26 +80,3 @@ def ADMM_EN2(R, d, x0, lam, mu, maxits, tol, quiet=False, selector=None):
             break
 
     return {'x': x, 'y': y, 'z': z, 'k': k}
-
-
-
-
-# Load input data from CSV files saved from R
-# R = np.loadtxt("../R.csv", delimiter=",")
-# d = np.loadtxt("../d.csv", delimiter=",")
-# x0 = np.loadtxt("../x0.csv", delimiter=",")
-
-# d = d.reshape(-1,1)
-# x0 = x0.reshape(-1,1)
-
-# # print("R shape:", R.shape)
-# # print("Condition number of R:", np.linalg.cond(R))
-# # print("Eigenvalues of R:", np.linalg.eigvals(R))
-
-# # Your function call — adjust param names to match your ADMM_EN2 signature
-# res_py = ADMM_EN2(R, d, x0, lam=0.1, mu=1.0, maxits=1000, tol=(1e-6,1e-6), quiet=False)
-
-# print("Python x:", res_py["x"].flatten())
-# print("Iterations:", res_py["k"])
-
-# done

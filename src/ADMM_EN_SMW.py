@@ -84,19 +84,3 @@ def ADMM_EN_SMW(Ainv, V, R, d, x0, lam, mu, maxits, tol, quiet=False, selector=N
             break
 
     return {"x": x, "y": y, "z": z, "k": k}
-
-
-
-# Load CSV files
-# Ainv = np.loadtxt("../Ainv.csv", delimiter=",").reshape(-1, 1)   # (p,1)
-# V = np.loadtxt("../V.csv", delimiter=",")                        # (n,p)
-# R = np.loadtxt("../R.csv", delimiter=",")                        # (n,n)
-# d = np.loadtxt("../d.csv", delimiter=",").reshape(-1, 1)         # (p,1)
-# x0 = np.loadtxt("../x0.csv", delimiter=",").reshape(-1, 1)       # (p,1)
-# selector = np.loadtxt("../selector.csv", delimiter=",").reshape(-1, 1)  # (p,1)
-
-# res_py = ADMM_EN_SMW(Ainv, V, R, d, x0, lam=0.1, mu=1.0, maxits=1000, tol=(1e-6,1e-6), quiet=False, selector=1)
-
-# print("\nPython x:", res_py['x'].flatten())
-
-# done

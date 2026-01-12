@@ -11,19 +11,3 @@ def normalizetest(Xtst, Xn):
     Xtst_normalized = Xtst_centered[:, Xn['Id']] / Xn['vx'][Xn['Id']]
     
     return Xtst_normalized
-
-# Training data
-# Xtr = np.random.choice(np.arange(1, 4), size=(3, 4), replace=True)
-
-# # Test data
-# Xtst = np.random.choice(np.arange(1, 4), size=(3, 4), replace=True)
-
-# # Normalize training data
-# Nm = normalize(Xtr)
-
-# # Normalize test data
-# Xtst_norm = normalizetest(Xtst, Nm)
-
-# print("Training data:\n", Xtr)
-# print("Test data before normalization:\n", Xtst)
-# print("Normalized test data:\n", Xtst_norm)

@@ -28,7 +28,7 @@ def ASDA(Xt, Yt, Om=None, gam=1e-3, lam=1e-6, q=None, method='SDAAP', control=No
         class_labels = [str(i+1) for i in range(Yt.shape[1])]
         factorY = np.array([class_labels[np.argmax(row)] for row in Yt])
     elif np.issubdtype(Yt.dtype, np.integer):
-        # NEW: case 3 integer labels
+        # case 3: integer labels
         Y_bin, class_labels = class_ind([str(y) for y in Yt])
         factorY = np.array([str(y) for y in Yt])
     else:
@@ -84,7 +84,7 @@ def ASDA(Xt, Yt, Om=None, gam=1e-3, lam=1e-6, q=None, method='SDAAP', control=No
         raise ValueError(f"{method} is not a valid method")
 
     if method == 'SDAD' and control['mu'] is None:
-        control['mu'] = 1  # default for SDAD
+        control['mu'] = 1 
 
     if control['CV'] and len(np.atleast_1d(lam)) < 2:
         raise ValueError("If using CV, lam must be a vector with >=2 elements")
@@ -114,19 +114,6 @@ def ASDA(Xt, Yt, Om=None, gam=1e-3, lam=1e-6, q=None, method='SDAAP', control=No
                 res = SDAAP(Xt, Y_bin, Om, gam, lam, q, control['PGsteps'], control['PGtol'],
                             control['maxits'], control['tol'], selector, control['initTheta'],
                             rankRed=control['rankRed'])
-        elif method == 'SDAP':
-            res = SDAP(...)  # Similar structure
-        elif method == 'SDAD':
-            res = SDAD(...)  # Similar structure
-
-    else:
-        # Cross-validation path
-        if method == 'SDAAP':
-            res = SDAAPcv(...)  # implement as needed
-        elif method == 'SDAP':
-            res = SDAPcv(...)
-        elif method == 'SDAD':
-            res = SDADcv(...)
 
     ###
     # LDA Postprocessing
